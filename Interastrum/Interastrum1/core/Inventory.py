@@ -3,7 +3,7 @@ from core.Item import Item
 class Inventory:
     def __init__(self, max_weight: int):
         self.max_weight = max_weight
-        self.contents = {}  # { item_name: (Item, cantidad) }
+        self.contents = {}
 
     def total_weight(self):
         return sum(item.weight * qty for item, qty in self.contents.values())
