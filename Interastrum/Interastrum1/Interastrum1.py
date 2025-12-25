@@ -17,9 +17,10 @@ def presentation():
     D/6: Salir
     """)
 
-def start_new_game():
+def game():
     print("Iniciando nueva partida...")
-    # Lógica de iniciar partida aquí
+    universe = sector_utils.generate_universe()
+
 
 def open_settings():
     print("Ajustes… próximamente.")
@@ -43,7 +44,7 @@ def exit_game():
 
 def user_choice():
     actions = {
-        'q': start_new_game, '1': start_new_game,
+        'q': game, '1': game,
         'w': open_settings, '2': open_settings,
         'e': show_news, '3': show_news,
         'a': show_help, '4': show_help,
@@ -63,6 +64,7 @@ def user_choice():
             presentation()
 
 def main():
+    settings = user_utils.load_user_settings()
     presentation()
     user_choice()
 
