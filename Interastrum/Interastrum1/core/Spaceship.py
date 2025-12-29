@@ -26,3 +26,4 @@ class Spaceship:
         self.warp_chance = warp_chance
         self.warp_interception = warp_interception
         self.repair = round(max_integrity * math_utils.clamp(repair))
+        self.landed = False

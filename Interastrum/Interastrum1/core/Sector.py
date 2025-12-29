@@ -20,9 +20,9 @@ class Sector:
         })
 
         self.asteroids_presence = math_utils.normalize_dict({
-            "metals": random.randint(0, 100),
-            "silicon": random.randint(0, 100),
-            "ice": random.randint(0, 100),
-            "gases": random.randint(0, 100),
+            "metals": random.randint(0, 25),
+            "silicon": random.randint(0, 25),
+            "ice": random.randint(0, 25),
+            "gases": random.randint(0, 25),
             "nothing": random.randint(0, 100),
         })

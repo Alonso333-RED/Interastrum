@@ -2,13 +2,15 @@ from abc import ABC, abstractmethod
 
 class Astro(ABC):
 
-    def interact(self, tipo: str, other):
-        if tipo not in self.interactions:
-            raise ValueError(f"Interacción '{tipo}' no soportada")
-        self.interactions[tipo](other)
+    def interact(self, player, action: str):
+        interactions = self.interactions
+        if action not in interactions:
+            return False
+
+        interactions[action](player)
+        return True
 
     @property
     @abstractmethod
     def interactions(self) -> dict:
-        """Retorna un dict {nombre: función}"""
         pass

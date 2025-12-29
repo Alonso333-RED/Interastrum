@@ -1,5 +1,6 @@
 from utils import sector_utils
 from utils import user_utils
+from utils import math_utils
 import textwrap
 
 def presentation():
@@ -20,7 +21,11 @@ def presentation():
 def game():
     print("Iniciando nueva partida...")
     universe = sector_utils.generate_universe()
-
+    test_dict = math_utils.normalize_dict({
+        "1": 0.25, "2": 0.25, "3": 0.25
+    })
+    print(test_dict)
+    print(sum(test_dict.values()))
 
 def open_settings():
     print("Ajustes… próximamente.")
